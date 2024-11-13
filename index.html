@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
 
         <title>reveal.js</title>
 
@@ -23,189 +24,216 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h1>Beautiful presentations</h1>
-                    <h2>New features</h2>
-                    <ul>
-                        <li>Nerd icons </li>
-                        <li>
-                            <code class="js">
-                                (inline) => code("highlighting")
-                            </code>
-                        </li>
-                        <li>Automatic QR Code generation</li>
-                        <li>and much more!</li>
-                    </ul>
-                </section>
-                <section>
-                    <h1>CUSTOM TOKYONIGHT THEME</h1>
-                    <h2 class="fragment">THAT HAS</h2>
-                    <h3 class="fragment">MULTI</h3>
-                    <h4 class="fragment">LEVEL</h4>
-                    <h5 class="fragment">HEADING</h5>
-                    <h6 class="fragment">COLORS</h6>
-                    <h6>
-                        Thanks to this project
-                        <a
-                            href="https://github.com/tcmmichaelb139/obsidian-tokyonight">
-                            
-                        </a>
-                        for the colorscheme!
-                    </h6>
+                    <h1>Python Online Interpreter</h1>
+                    <img
+                        src="https://www.online-python.com/"
+                        alt=""
+                        data-type="qrcode"
+                        class="r-stretch"
+                    />
                 </section>
                 <section>
                     <section>
-                        <h1>Tailwind CSS</h1>
-                        <div class="grid grid-cols-2 gap-8">
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div class="col-span-2">
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <h1>Custom classes</h1>
-                        <div class="grid grid-cols-3 gap-8">
-                            <div class="border-r">
-                                <h5>border-r</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-o">
-                                <h5>border-o</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-y">
-                                <h5>border-y</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                        </div>
+                        <h1>Функции</h1>
+                        <pre><code class="python">
+def имя_функции(параметры):
+    # Тело функции
+    return результат  # (необязательно)
+                        </code></pre>
+                        <h4>Пример</h4>
+                        <pre><code class="python">
+def add_numbers(a, b):
+    return a + b
+
+print(add_numbers(2, 3)) # => 5
+                        </code></pre>
                     </section>
                 </section>
                 <section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <div>
-                            Now also has Tokyo Night
-                            <code>highlight.js</code>
-                            highlighting implementation
-                        </div>
-                        <pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
-					</code></pre>
-                    </section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <h5>Inline code highlighting is now also supported!</h5>
+                    <section>
+                        <h1>Задание 1</h1>
                         <p>
-                            Just wrap your code with
-                            <code>&lt;code&gt;</code>
-                            tag and get highlighting like this
-                            <code class="js">
-                                const foo = () => {return bar}
-                            </code>
-                            !
+                            Напишите функцию calculate_circle_area(radius),
+                            которая принимает радиус круга и возвращает его
+                            площадь
+                        </p>
+                        <code>S=π*radius^2 </code>
+                    </section>
+                    <section>
+                        <h1>Задание 1</h1>
+                        <h4>Ответ</h4>
+                        <pre><code class="python">
+def calculate_circle_area(radius):
+    if radius < 0:
+        return "Ошибка: радиус не может быть отрицательным."
+    pi = 3.14
+    return pi * radius ** 2
+
+area = calculate_circle_area(5)
+
+print("Площадь круга:", area)  # Площадь круга: 78.5
+print(calculate_circle_area(-2))  # Ошибка: радиус не может быть отрицательным.
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Задание 2</h1>
+                        <p>
+                            Напишите функцию is_even(number), которая принимает
+                            целое число и возвращает True, если число четное, и
+                            False в противном случае.
+                        </p>
+                        <code
+                            >Операторы сравнения возвращают логический тип
+                            значений</code
+                        >
+                    </section>
+                    <section>
+                        <h1>Задание 2</h1>
+                        <h4>Ответ</h4>
+                        <pre><code class="python">
+def is_even(number):
+    return number % 2 == 0
+
+print(is_even(4))  # True
+print(is_even(7))  # False
+
+def filter_even_numbers(numbers):
+    return [num for num in numbers if is_even(num)]
+
+print(filter_even_numbers([1, 2, 3, 4, 5, 6]))  # [2, 4, 6]
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Задание 3</h1>
+                        <p>
+                            Создайте функцию celsius_to_fahrenheit(celsius),
+                            которая принимает температуру в градусах Цельсия и
+                            возвращает её в градусах Фаренгейта
+                        </p>
+                        <code>F = C * (9/5) + 32.</code>
+                        <code>C = (F - 32) * 5/9</code>
+                    </section>
+                    <section>
+                        <h1>Задание 3</h1>
+                        <h4>Решение</h4>
+                        <pre><code class="python">
+def celsius_to_fahrenheit(celsius):
+    return celsius * 9 / 5 + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5 / 9
+
+# Примеры вызова
+print(celsius_to_fahrenheit(25))  # 77.0
+print(fahrenheit_to_celsius(77))  # 25.0
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Параметры по умолчанию</h1>
+                        <p>
+                            Параметры по умолчанию задают значение аргумента,
+                            которое используется, если вызов функции не передал
+                            его явно
+                        </p>
+                        <pre><code class="python">
+def greet(name, greeting="Привет"):
+    print(f"{greeting}, {name}!")
+
+greet("Анна")              # Привет, Анна!
+greet("Анна", "Здравствуйте")  # Здравствуйте, Анна!
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Задание 4</h1>
+                        <p>
+                            Напишите функцию convert_currency(amount, rate=70),
+                            которая принимает сумму в долларах и курс валюты (по
+                            умолчанию 70), а затем возвращает сумму в рублях
                         </p>
                     </section>
+                    <section>
+                        <h1>Задание 4</h1>
+                        <h4>Решение</h4>
+                        <pre><code class="python">
+def convert_currency(amount, rate=70):
+    return amount * rate
+
+# Примеры вызова
+print(convert_currency(100))       # 7000
+print(convert_currency(100, 75))  # 7500
+                        </code></pre>
+                    </section>
                 </section>
                 <section>
-                    <h1>Mermaid for beautiful diagrams!</h1>
-                    <div class="mermaid">
-                        <pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre
-                        >
-                    </div>
-                    <h4>
-                        Check documentation
-                        <a href="https://mermaid.js.org/config/usage.html">
-                            here
-                        </a>
-                        !
-                    </h4>
+                    <section>
+                        <h1>Задание 5</h1>
+                        <p>
+                            Напишите функцию calculate_discount(price,
+                            discount=10), которая принимает цену товара и
+                            процент скидки (по умолчанию 10%), а затем
+                            возвращает финальную цену после скидки.
+                        </p>
+                    </section>
+                    <section>
+                        <h1>Задание 5</h1>
+                        <pre><code class="python">
+def calculate_discount(price, discount=10):
+    return price - (price * discount / 100)
+
+# Примеры вызова
+print(calculate_discount(1000))       # 900.0
+print(calculate_discount(1000, 20))  # 800.0
+                        </code></pre>
+                    </section>
                 </section>
                 <section>
-                    <h1>Now supports Nerd font icons!</h1>
-                    <div>Nerdy project that adds icons to font itself</div>
-                    <h6>
-                        Checkout their site for icons like this
-                        <a href="https://www.nerdfonts.com/">󰖟</a>
-                        !
-                    </h6>
+                    <h1>Функции и область видимости</h1>
+                    <pre><code class="python">
+x = 10
+
+def modify_global():
+    global x  # Указываем, что работаем с глобальной переменной
+    x = 20
+
+modify_global()
+print(f"Глобальная переменная x: {x}")  # Изменится на 20
+                    </code></pre>
                 </section>
                 <section>
-                    <h1>Now supports automatic QRCode generation!</h1>
-                    <div>
-                        With GoQR you can just add data-type and alt attributes
-                        to your
-                        <code class="html">
-                            &lt;img src="https://goqr.me/" data-type="qrcode" /
-                            &gt;
-                        </code>
-                        tag!
-                    </div>
-                    <img
-                        class="r-stretch"
-                        src="https://goqr.me/"
-                        data-type="qrcode" />
-                </section>
-                <section>
-                    <h1>New changes on the way!</h1>
+                    <section>
+                        <h1>Задание 6</h1>
+                        <p>
+                            Создайте глобальную переменную counter, которая
+                            увеличивается на 1 при каждом вызове функции
+                            increment_counter()
+                        </p>
+                    </section>
+                    <section>
+                        <h1>Задание 6</h1>
+                        <pre><code class="python">
+# Глобальная переменная
+counter = 0
+
+def increment_counter():
+    global counter  # Указываем, что используем глобальную переменную
+    counter += 1
+    print(f"Counter: {counter}")
+
+# Примеры вызова
+increment_counter()  # Counter: 1
+increment_counter()  # Counter: 2
+increment_counter()  # Counter: 3
+                        </code></pre>
+                    </section>
                 </section>
             </div>
         </div>
@@ -232,19 +260,19 @@ var foo = {
             // - https://revealjs.com/config/
 
             const colors = {
-                blue0: 'rgb(61, 89, 161)',
-                blue: 'rgb(122, 162, 247)',
-                cyan: 'rgb(125, 207, 255)',
-                magenta: 'rgb(187, 154, 247)',
-                orange: 'rgb(255, 158, 100)',
-                yellow: 'rgb(224, 175, 104)',
-                green: 'rgb(158, 206, 106)',
-                teal: 'rgb(26, 188, 156)',
-                red: 'rgb(255, 117, 127)',
-                red1: 'rgb(219, 75, 75)',
-                fg: 'rgb(192, 202, 245)',
-                bg: 'rgb(26, 27, 38)',
-                transparent: '#00000000',
+                blue0: "rgb(61, 89, 161)",
+                blue: "rgb(122, 162, 247)",
+                cyan: "rgb(125, 207, 255)",
+                magenta: "rgb(187, 154, 247)",
+                orange: "rgb(255, 158, 100)",
+                yellow: "rgb(224, 175, 104)",
+                green: "rgb(158, 206, 106)",
+                teal: "rgb(26, 188, 156)",
+                red: "rgb(255, 117, 127)",
+                red1: "rgb(219, 75, 75)",
+                fg: "rgb(192, 202, 245)",
+                bg: "rgb(26, 27, 38)",
+                transparent: "#00000000",
             }
 
             Reveal.initialize({
@@ -262,19 +290,19 @@ var foo = {
                 customcontrols: {
                     controls: [
                         {
-                            icon: '<div></div>',
-                            title: 'Clear canvas (DEL)',
-                            action: 'RevealChalkboard.clear();',
+                            icon: "<div></div>",
+                            title: "Clear canvas (DEL)",
+                            action: "RevealChalkboard.clear();",
                         },
                         {
-                            icon: '<div></div>',
-                            title: 'Toggle chalkboard (B)',
-                            action: 'RevealChalkboard.toggleChalkboard();',
+                            icon: "<div></div>",
+                            title: "Toggle chalkboard (B)",
+                            action: "RevealChalkboard.toggleChalkboard();",
                         },
                         {
-                            icon: '<div></div>',
-                            title: 'Toggle notes canvas (C)',
-                            action: 'RevealChalkboard.toggleNotesCanvas();',
+                            icon: "<div></div>",
+                            title: "Toggle notes canvas (C)",
+                            action: "RevealChalkboard.toggleNotesCanvas();",
                         },
                     ],
                 },
@@ -284,106 +312,106 @@ var foo = {
                         {
                             color: colors.bg,
                             cursor:
-                                'url(' +
+                                "url(" +
                                 path +
-                                'img/boardmarker-black.png), auto',
+                                "img/boardmarker-black.png), auto",
                         },
                         {
                             color: colors.fg,
                             cursor:
-                                'url(' +
+                                "url(" +
                                 path +
-                                'img/boardmarker-black.png), auto',
+                                "img/boardmarker-black.png), auto",
                         },
                         {
                             color: colors.blue,
                             cursor:
-                                'url(' +
+                                "url(" +
                                 path +
-                                'img/boardmarker-black.png), auto',
+                                "img/boardmarker-black.png), auto",
                         },
                         {
                             color: colors.red,
                             cursor:
-                                'url(' +
+                                "url(" +
                                 path +
-                                'img/boardmarker-black.png), auto',
+                                "img/boardmarker-black.png), auto",
                         },
                         {
                             color: colors.green,
                             cursor:
-                                'url(' +
+                                "url(" +
                                 path +
-                                'img/boardmarker-black.png), auto',
+                                "img/boardmarker-black.png), auto",
                         },
                         {
                             color: colors.yellow,
                             cursor:
-                                'url(' +
+                                "url(" +
                                 path +
-                                'img/boardmarker-black.png), auto',
+                                "img/boardmarker-black.png), auto",
                         },
                         {
                             color: colors.teal,
                             cursor:
-                                'url(' +
+                                "url(" +
                                 path +
-                                'img/boardmarker-black.png), auto',
+                                "img/boardmarker-black.png), auto",
                         },
                         {
                             color: colors.orange,
                             cursor:
-                                'url(' +
+                                "url(" +
                                 path +
-                                'img/boardmarker-black.png), auto',
+                                "img/boardmarker-black.png), auto",
                         },
                     ],
                     chalks: [
                         {
                             color: colors.bg,
                             cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
+                                "url(" + path + "img/chalk-white.png), auto",
                         },
                         {
                             color: colors.fg,
                             cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
+                                "url(" + path + "img/chalk-white.png), auto",
                         },
                         {
                             color: colors.blue,
                             cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
+                                "url(" + path + "img/chalk-white.png), auto",
                         },
                         {
                             color: colors.red,
                             cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
+                                "url(" + path + "img/chalk-white.png), auto",
                         },
                         {
                             color: colors.green,
                             cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
+                                "url(" + path + "img/chalk-white.png), auto",
                         },
                         {
                             color: colors.yellow,
                             cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
+                                "url(" + path + "img/chalk-white.png), auto",
                         },
                         {
                             color: colors.teal,
                             cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
+                                "url(" + path + "img/chalk-white.png), auto",
                         },
                         {
                             color: colors.orange,
                             cursor:
-                                'url(' + path + 'img/chalk-white.png), auto',
+                                "url(" + path + "img/chalk-white.png), auto",
                         },
                     ],
                 },
                 mermaid: {
-                    securityLevel: 'loose',
-                    theme: 'dark',
+                    securityLevel: "loose",
+                    theme: "dark",
                     themeVariables: {
                         darkMode: true,
                         textColor: colors.fg,
@@ -396,4 +424,3 @@ var foo = {
         </script>
     </body>
 </html>
-
